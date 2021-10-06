@@ -11,10 +11,16 @@ public class HouseList {
         Temperature temperature = new Temperature();
 
         List<House> listOfHouses = new ArrayList<>();
-        for(int i = 1; i <=8; i++){
-            listOfHouses.add(new House(i,temperature.getThermostatReadings().get(1)));
-        }
-        System.out.println(listOfHouses);
+        listOfHouses.add(new House(1,1));
+        listOfHouses.add(new House(2,1));
+        listOfHouses.add(new House(3,1));
+        listOfHouses.add(new House(4,1));
+        listOfHouses.add(new House(5,1));
+        listOfHouses.add(new House(6,1));
+        listOfHouses.add(new House(7,1));
+        listOfHouses.add(new House(8,1));
+
+
         return listOfHouses;
     }
 

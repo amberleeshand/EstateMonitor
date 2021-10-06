@@ -25,21 +25,7 @@ public class Users {
         return listOfUsers;
     }
 
-    public HashMap<Users, HouseList> getHashmap(){
 
-        Users allUsers = new Users();
-        HouseList allHouses = new HouseList();
-
-        HashMap<String, Integer> propertyMap = new HashMap<>();
-
-        for (User eachUser : getListOfUsers()){
-            String username = eachUser.getUser();
-            for (House eachHouse : allHouses.getHouses()){
-               int house = eachHouse.getHouseNumber();
-               propertyMap.put(username, house);
-            }
-        }
-    }
 
 
 
