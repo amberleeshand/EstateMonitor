@@ -1,5 +1,7 @@
 package org.djna.asynch.estate.data;
 
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import java.util.ArrayList;
 
 public class Temperature {
@@ -21,6 +23,10 @@ public class Temperature {
         thermostatReadings.add(15);
         thermostatReadings.add(-15);
     }
+
+    @RequestMapping("")
+
+
 
     public ArrayList<Integer> getThermostatReadings() {
         return thermostatReadings;

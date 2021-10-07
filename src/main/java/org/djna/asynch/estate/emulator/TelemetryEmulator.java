@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.log4j.Logger;
+import org.djna.asynch.estate.data.House;
+import org.djna.asynch.estate.data.HouseList;
 import org.djna.asynch.estate.data.ThermostatReading;
 
 import javax.jms.*;
@@ -25,8 +27,12 @@ public class TelemetryEmulator {
         LOGGER.debug("debug message");
 
         // example devices
-        startWork(makeDevice("101","hall", 10), false);
-        //startWork(makeDevice("101","basement", 25), false);
+        HouseList allHouses = new HouseList();
+        for (House eachHouse : allHouses.getHouses()) {
+            int house = eachHouse.getHouseNumber();
+            startWork(makeDevice(String.valueOf(house), "hall", 10), false);
+            //startWork(makeDevice("101","basement", 25), false);
+        }
     }
 
     // starts thread for specified emulator
