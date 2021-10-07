@@ -13,6 +13,7 @@
 <H2 th:text="'Monitoring: ' + ${property} + ' ' + ${location} " />
 <H2 th:text="'Temp: ' + ${reading.getDate()} " />
 <H2 th:text="'Temp: ' + ${reading.getTemperature()} " />
+<input id="topic" type="text"  name="topic"  th:value="${topic}" />
 
 
 <p id="Timestamp">No Updates</p>
